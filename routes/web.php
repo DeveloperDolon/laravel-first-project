@@ -14,3 +14,5 @@ Route::get('/home/{name}', function ($name) {
 Route::view("/about", "about"); // we can define route like this
 
 Route::get("/user", [UserController::class, 'getUser']);
+
+Route::get("/name/{name}", [UserController::class, "getUserName"]);

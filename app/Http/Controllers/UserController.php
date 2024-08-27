@@ -10,4 +10,8 @@ class UserController extends Controller
     {
         return "Code step by step.";
     }
+
+    function getUserName($name) {
+        return view("getUserName", ["name" => $name]);
+    }
 };
