@@ -8,6 +8,7 @@
     <title>This is the product details page</title>
 </head>
 <body>
+    @include('common.header', ['page' => "Product Details"])
     <h1>The product name is {{$product}}.</h1>
 
     @for ($i = 0; $i < count($products); $i++)
