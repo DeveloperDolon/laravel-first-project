@@ -46,6 +46,14 @@ class UserController extends Controller
     }
 
     function addUser(Request $req) {
+
+        $req->validate([
+            "name" => "required | min:3 | max:10",
+            "email" => "required | email",
+            "password" => "required | password",
+            "phone_number" => "required | digits:11"
+        ]);
+
         echo "User name is $req->name";
         echo "<br>";
         echo "User email is $req->email";
