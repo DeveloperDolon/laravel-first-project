@@ -53,7 +53,7 @@ class UserController extends Controller
             [
                 "name" => "required | min:3 | max:10",
                 "email" => "required | email",
-                "password" => "required | password",
+                "password" => "required",
                 "mobile_number" => "required | digits:11",
                 "skill" => "required"
             ],
@@ -61,8 +61,8 @@ class UserController extends Controller
                 "name.required" => "The attribute field is required.",
                 "name.min" => "The attribute field must be at least :min characters.",
                 "name.max" => "The attribute field must be less than or equal to :max characters.",
-                "email.email" => "The attribute field must be a valid email address.",
-                "password.password" => "The attribute field must be a valid password.",
+                "email.required" => "The attribute field must be a valid email address.",
+                "password.required" => "The attribute field must be a valid password.",
                 "skill.required" => "The attribute field must"
             ]
         );
