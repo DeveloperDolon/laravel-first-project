@@ -12,5 +12,6 @@
     </head>
     <body class="">
         <h1>Hello world from laravel.</h1>
+        <a href="{{route("hm")}}">Home page</a>
     </body>
 </html>
