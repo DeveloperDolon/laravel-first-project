@@ -32,8 +32,8 @@ Route::post("adduser", [UserController::class, "addUser"]);
 
 Route::prefix("student")->group(function () { // route handling with prefix function in laravel routes
     Route::controller(UserController::class)->group(function () {
-        
-        Route::view("/home", "home");
+        Route::view("/home", "home")->middleware("check1");
+
         Route::get("/profile", "getUser");
 
         Route::get("/login", "addUser");
