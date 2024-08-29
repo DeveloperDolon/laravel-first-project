@@ -45,7 +45,13 @@ class UserController extends Controller
         return view("productDetails", ["product" => $product, "products" => $products]);
     }
 
-    function getUserForm() {
-        return view("form");
+    function addUser(Request $req) {
+        echo "User name is $req->name";
+        echo "<br>";
+        echo "User email is $req->email";
+        echo "<br>";
+        echo "User phone number is $req->phone_number";
+        echo "<br>";
+        echo "User password is $req->password";
     }
 };

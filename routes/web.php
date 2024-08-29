@@ -19,4 +19,6 @@ Route::get("/name/{name}", [UserController::class, "getUserName"]);
 
 Route::get("/details/{product}", [UserController::class, "getDetails"]);
 
-Route::get("/user-form", [UserController::class, "getUserForm"]);
+Route::view("/user-form", "user-form");
+
+Route::post("adduser", [UserController::class, "addUser"]);
