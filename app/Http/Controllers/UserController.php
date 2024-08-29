@@ -44,4 +44,8 @@ class UserController extends Controller
         ];
         return view("productDetails", ["product" => $product, "products" => $products]);
     }
+
+    function getUserForm() {
+        return view("form");
+    }
 };
