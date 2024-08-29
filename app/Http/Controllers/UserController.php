@@ -44,6 +44,7 @@ class UserController extends Controller
                 "description" => "This is a 1D G5 monitor."
             ]
         ];
+        
         return view("productDetails", ["product" => $product, "products" => $products]);
     }
 
@@ -51,7 +52,7 @@ class UserController extends Controller
     {
         $req->validate(
             [
-                "name" => "required | min:3 | max:10",
+                "name" => "required | uppercase | min:3 | max:10",
                 "email" => "required | email",
                 "password" => "required",
                 "mobile_number" => "required | digits:11",
@@ -63,7 +64,8 @@ class UserController extends Controller
                 "name.max" => "The attribute field must be less than or equal to :max characters.",
                 "email.required" => "The attribute field must be a valid email address.",
                 "password.required" => "The attribute field must be a valid password.",
-                "skill.required" => "The attribute field must"
+                "skill.required" => "The attribute field must",
+                "name.uppercase" => "Nam upper case kor hala.",
             ]
         );
 
