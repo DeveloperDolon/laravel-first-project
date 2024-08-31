@@ -20,7 +20,7 @@ Route::get("/hello/world", [RouteController::class, "show"]);
 
 Route::view("/about", "about"); // we can define route like this
 
-Route::get("/user", [UserController::class, 'getUser']);
+Route::get("/user", [UserController::class, 'getUsers']);
 
 Route::get("/name/{name}", [UserController::class, "getUserName"]);
 
@@ -41,3 +41,13 @@ Route::prefix("student")->group(function () { // route handling with prefix func
         Route::get("/details/{name}", "getUserName");
     });
 });
+
+// Route::middleware("check1")->group(function () { // to apply middleware group to all routes
+//     Route::view("/home", "home")->middleware("check1");
+
+//     Route::get("/profile", "getUser");
+
+//     Route::get("/login", "addUser");
+
+//     Route::get("/details/{name}", "getUserName");
+// });

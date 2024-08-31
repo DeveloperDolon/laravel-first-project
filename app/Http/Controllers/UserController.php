@@ -3,12 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
-    function getUser()
+    function getUsers()
     {
-        return "Code step by step.";
+        // return "Code step by step.";
+        
+        // return response("Code step by step.");
+        
+        // return response()->json(["Code step by step."]);
+        
+        // return view('get-user');
+        return DB::select("select * from users");
     }
 
     function getUserName($name)
