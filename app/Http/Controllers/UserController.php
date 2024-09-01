@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Http;
+
 
 class UserController extends Controller
 {
     function getUsers()
     {
         // return "Code step by step.";
-        
+
         // return response("Code step by step.");
-        
+
         // return response()->json(["Code step by step."]);
-        
+
         // return view('get-user');
         return DB::select("select * from users");
     }
@@ -30,7 +31,23 @@ class UserController extends Controller
         //     echo "User add failed.";
         // }
 
-        $response = DB::table("users")->get();
+        // $response = DB::table("users")->get();
+
+        $response = Student::get();
+        // $result = Student::where("name", "Kabab Lalu")->delete();
+
+        $result = Student::insert([
+            "id" => 2,
+            "name" => "Sristi Rani",
+            "email" => "sristi@gmail.com",
+            "password" => "password"
+        ]);
+
+        if ($result) {
+            echo "User insert success.";
+        } else {
+            echo "User insert failed.";
+        }
         return view("getUserName", ["data" => json_decode($response)]);
     }
 
@@ -62,7 +79,7 @@ class UserController extends Controller
                 "description" => "This is a 1D G5 monitor."
             ]
         ];
-        
+
         return view("productDetails", ["product" => $product, "products" => $products]);
     }
 
