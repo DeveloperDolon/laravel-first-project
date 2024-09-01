@@ -9,8 +9,5 @@ class Student extends Model
 {
     use HasFactory;
     protected $table = 'collage_students';
-
-    function dummyFunc() {
-        return "Dummy Function Called";
-    }
+    
 }

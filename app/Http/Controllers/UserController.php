@@ -22,7 +22,7 @@ class UserController extends Controller
 
     function getUserName()
     {
-        $response = Http::get("https://jsonplaceholder.typicode.com/todos/1");
+        $response = Http::get("https://jsonplaceholder.typicode.com/posts");
         return view("getUserName", ["data" => json_decode($response)]);
     }
 

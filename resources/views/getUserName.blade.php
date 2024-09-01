@@ -1,2 +1,5 @@
 
-<h2>The user name is : {{$data->title}}</h2>
+
+@foreach ($data as $post)
+    <h2>The post title is : {{$post->title}}</h2>    
+@endforeach
