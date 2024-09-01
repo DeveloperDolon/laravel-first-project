@@ -22,7 +22,15 @@ class UserController extends Controller
 
     function getUserName()
     {
-        $response = Http::get("https://jsonplaceholder.typicode.com/posts");
+        // $result = DB::table("users")->where("name", "Durjoy Roy")->delete();
+
+        // if($result) {
+        //     echo "User add success.";
+        // } else {
+        //     echo "User add failed.";
+        // }
+
+        $response = DB::table("users")->get();
         return view("getUserName", ["data" => json_decode($response)]);
     }
 
