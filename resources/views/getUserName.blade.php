@@ -1,2 +1,2 @@
 
-<h2>The user name is : {{$name}}</h2>
+<h2>The user name is : {{$data->title}}</h2>

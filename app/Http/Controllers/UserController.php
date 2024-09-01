@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Http;
 
 class UserController extends Controller
 {
@@ -19,9 +20,10 @@ class UserController extends Controller
         return DB::select("select * from users");
     }
 
-    function getUserName($name)
+    function getUserName()
     {
-        return view("getUserName", ["name" => $name]);
+        $response = Http::get("https://jsonplaceholder.typicode.com/todos/1");
+        return view("getUserName", ["data" => json_decode($response)]);
     }
 
     function getDetails($product)
