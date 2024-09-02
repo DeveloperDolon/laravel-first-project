@@ -9,5 +9,4 @@ class Student extends Model
 {
     use HasFactory;
     protected $table = 'collage_students';
-    
 }

@@ -6,7 +6,6 @@ use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-
 class UserController extends Controller
 {
     function getUsers()
@@ -36,18 +35,18 @@ class UserController extends Controller
         $response = Student::get();
         // $result = Student::where("name", "Kabab Lalu")->delete();
 
-        $result = Student::insert([
-            "id" => 2,
-            "name" => "Sristi Rani",
-            "email" => "sristi@gmail.com",
-            "password" => "password"
-        ]);
+        // $result = Student::insert([
+        //     "id" => 2,
+        //     "name" => "Sristi Rani",
+        //     "email" => "sristi@gmail.com",
+        //     "password" => "password"
+        // ]);
 
-        if ($result) {
-            echo "User insert success.";
-        } else {
-            echo "User insert failed.";
-        }
+        // if ($result) {
+        //     echo "User insert success.";
+        // } else {
+        //     echo "User insert failed.";
+        // }
         return view("getUserName", ["data" => json_decode($response)]);
     }
 
