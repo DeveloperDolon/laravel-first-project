@@ -121,6 +121,12 @@ class UserController extends Controller
 
     function fileUpload(Request $req) 
     {
-        echo "Hello world from file upload function";
+        // $req->validate([
+        //     'file' =>'required|mimes:jpg,png,jpeg|max:2048',
+        // ]);
+        $path = $req->file("file")->store("public");
+        
+        return $path;
+        // return "Hello world.";
     }
 };
