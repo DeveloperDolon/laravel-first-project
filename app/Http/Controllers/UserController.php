@@ -118,4 +118,9 @@ class UserController extends Controller
         $req->session()->put('name', $userName);
         return redirect('get-user');
     }
+
+    function fileUpload(Request $req) 
+    {
+        echo "Hello world from file upload function";
+    }
 };

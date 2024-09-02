@@ -47,6 +47,9 @@ Route::view("get-user", "get-user");
 Route::view("login", "login");
 Route::post("login", [UserController::class, "handleSession"]);
 
+Route::view("file-upload", "file-upload");
+Route::post("/file-upload", [UserController::class, "fileUpload"]);
+
 // Route::middleware("check1")->group(function () { // to apply middleware group to all routes
 //     Route::view("/home", "home")->middleware("check1");
 
