@@ -125,8 +125,8 @@ class UserController extends Controller
         //     'file' =>'required|mimes:jpg,png,jpeg|max:2048',
         // ]);
         $path = $req->file("file")->store("public");
+        $mainPath = explode("/", $path);
         
-        return $path;
-        // return "Hello world.";
+        return view("display-image", ["image" => $mainPath[1]]);
     }
 };
