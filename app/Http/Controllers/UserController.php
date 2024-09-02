@@ -111,4 +111,11 @@ class UserController extends Controller
         echo "<br>";
         echo "User password is $req->password";
     }
+
+    function handleSession(Request $req) 
+    {
+        $userName = $req->input("name");
+        $req->session()->put('name', $userName);
+        return redirect('get-user');
+    }
 };

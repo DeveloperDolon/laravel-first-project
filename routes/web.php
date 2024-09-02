@@ -42,6 +42,11 @@ Route::prefix("student")->group(function () { // route handling with prefix func
     });
 });
 
+Route::view("get-user", "get-user");
+
+Route::view("login", "login");
+Route::post("login", [UserController::class, "handleSession"]);
+
 // Route::middleware("check1")->group(function () { // to apply middleware group to all routes
 //     Route::view("/home", "home")->middleware("check1");
 
