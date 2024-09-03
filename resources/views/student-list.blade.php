@@ -30,4 +30,11 @@
             @endforeach
         </tbody>
     </table>
+    {{$students->links()}}
 </div>
+<style>
+    .w-5.h-5 {
+        width: 20px;
+        height: 20px;
+    }
+</style>

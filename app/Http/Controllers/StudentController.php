@@ -21,7 +21,7 @@ class StudentController extends Controller
 
     function getAllStudents() 
     {
-        $students = Student::all();
+        $students = Student::paginate(3);
         return view("student-list", ["students" => $students]);
     }
 
@@ -58,7 +58,8 @@ class StudentController extends Controller
         }
     }
 
-    function searchData(Request $request) {
+    function searchData(Request $request) 
+    {
        
         $input = $request->search;
 
