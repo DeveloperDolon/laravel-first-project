@@ -48,6 +48,11 @@ Route::view("get-user", "get-user");
 Route::view("login", "login");
 Route::post("login", [UserController::class, "handleSession"]);
 
+
+Route::get("update/{id}", [StudentController::class, "update"]);
+
+Route::patch("update-student/{id}", [StudentController::class, "updateStudent"]);
+
 Route::view("file-upload", "file-upload");
 Route::post("/file-upload", [UserController::class, "fileUpload"]);
 
@@ -58,6 +63,7 @@ Route::post("add-student", [StudentController::class, "addStudent"]);
 Route::get("student-list", [StudentController::class, "getAllStudents"]);
 
 Route::get("delete-student/{id}", [StudentController::class, "deleteStudent"]);
+
 // Route::middleware("check1")->group(function () { // to apply middleware group to all routes
 //     Route::view("/home", "home")->middleware("check1");
 

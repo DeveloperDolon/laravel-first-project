@@ -4,11 +4,11 @@
 
     <form action="" method="post">
         @csrf
-        <input type="text" name="name" placeholder="Input your name" >
+        <input type="text" name="name" placeholder="Input your name">
         <br><br>
         <input type="email" name="email" placeholder="Input your email">
         <br><br>
-        <input type="password" name="password" placeholder="Input your password">
+        <input type="text" name="password" placeholder="Input your password">
         <br><br>
         <button type="submit">Submit</button>
     </form>

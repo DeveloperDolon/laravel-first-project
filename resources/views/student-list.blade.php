@@ -7,15 +7,19 @@
             <th>Name</th>
             <th>Email</th>
             <th>Password</th>
+            <th>Action</th>
         </thead>
 
         <tbody>
             @foreach ($students as $item)
                 <tr>
-                    <td>{{$item['name']}}</td>
-                    <td>{{$item['email']}}</td>
-                    <td>{{$item['password']}}</td>
-                    <td><a href="delete-student/{{$item->id}}">Delete</a></td>
+                    <td>{{ $item['name'] }}</td>
+                    <td>{{ $item['email'] }}</td>
+                    <td>{{ $item['password'] }}</td>
+                    <td>
+                        <a href="delete-student/{{ $item->id }}">Delete</a>
+                        <a href="update/{{ $item->id }}">Edit</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
