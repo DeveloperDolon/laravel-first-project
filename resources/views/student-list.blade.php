@@ -2,6 +2,12 @@
     <!-- Because you are alive, everything is possible. - Thich Nhat Hanh -->
     <h1>The students lists in the bellow :- </h1>
 
+    <form action="search" method="GET">
+        @csrf
+        <input type="text" name="search" placeholder="Search here">
+        <button type="submit">Search</button>
+    </form>
+
     <table border="1">
         <thead>
             <th>Name</th>

@@ -1,7 +1,7 @@
 <div>
     <!-- The only way to do great work is to love what you do. - Steve Jobs -->
     <h1>Update student information</h1>
-
+    
     <form action="/update-student/{{$student->id}}" method="post" >
         @csrf
         @method("patch")

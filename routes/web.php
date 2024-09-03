@@ -62,6 +62,8 @@ Route::post("add-student", [StudentController::class, "addStudent"]);
 
 Route::get("student-list", [StudentController::class, "getAllStudents"]);
 
+Route::get("search", [StudentController::class, "searchData"]);
+
 Route::get("delete-student/{id}", [StudentController::class, "deleteStudent"]);
 
 // Route::middleware("check1")->group(function () { // to apply middleware group to all routes
