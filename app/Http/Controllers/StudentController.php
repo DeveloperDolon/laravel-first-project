@@ -17,4 +17,9 @@ class StudentController extends Controller
 
         return "Student added successfully.";
     }
+
+    function getAllStudents() {
+        $students = Student::all();
+        return view("student-list", ["students" => $students]);
+    }
 }

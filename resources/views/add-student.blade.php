@@ -1,6 +1,5 @@
 <div>
     <!-- Smile, breathe, and go slowly. - Thich Nhat Hanh -->
-
     <h1>Add student information</h1>
 
     <form action="" method="post">
@@ -13,5 +12,4 @@
         <br><br>
         <button type="submit">Submit</button>
     </form>
-
 </div>
