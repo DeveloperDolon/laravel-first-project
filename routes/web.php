@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RouteController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -49,6 +50,10 @@ Route::post("login", [UserController::class, "handleSession"]);
 
 Route::view("file-upload", "file-upload");
 Route::post("/file-upload", [UserController::class, "fileUpload"]);
+
+
+Route::view("add-student", "add-student");
+Route::post("add-student", [StudentController::class, "addStudent"]);
 
 // Route::middleware("check1")->group(function () { // to apply middleware group to all routes
 //     Route::view("/home", "home")->middleware("check1");
