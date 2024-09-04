@@ -9,4 +9,9 @@ class Student extends Model
 {
     use HasFactory;
     protected $table = 'students';
+
+    public function getNameAttribute() 
+    {
+        return "Hello Melo";    
+    }
 }
