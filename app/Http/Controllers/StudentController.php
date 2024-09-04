@@ -68,4 +68,8 @@ class StudentController extends Controller
         return view("student-list", ["students" => $students]);
     }
 
+    function getStudentDataWithCourse() {
+        return Student::find(1)->courseData;
+    }
+
 }

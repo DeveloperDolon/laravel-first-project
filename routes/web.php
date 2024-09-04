@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CourseController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RouteController;
 use App\Http\Controllers\StudentController;
@@ -65,6 +66,10 @@ Route::get("student-list", [StudentController::class, "getAllStudents"]);
 Route::get("search", [StudentController::class, "searchData"]);
 
 Route::get("delete-student/{id}", [StudentController::class, "deleteStudent"]);
+
+Route::get("courses", [CourseController::class, "getAllCourse"]);
+
+Route::get("souravData", [StudentController::class, "getStudentDataWithCourse"]);
 
 // Route::middleware("check1")->group(function () { // to apply middleware group to all routes
 //     Route::view("/home", "home")->middleware("check1");
