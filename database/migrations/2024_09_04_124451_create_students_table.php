@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string("name");
             $table->string("email");
             $table->string("password");
-            $table->unsignedBigInteger("course_id");
+            $table->integer("course_id");
             $table->foreign("course_id")->references("id")->on("courses")->cascadeOnDelete();
             $table->timestamps();
         });

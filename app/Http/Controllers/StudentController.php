@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 
 class StudentController extends Controller
 {
-    //
     function addStudent(Request $request) 
     {
         $student = new Student();
@@ -69,7 +68,6 @@ class StudentController extends Controller
     }
 
     function getStudentDataWithCourse() {
-        return Student::find(1)->courseData;
+        return Student::find(2)->courseData;
     }
-
 }

@@ -18,6 +18,6 @@ class Student extends Model
 
     public function courseData(): HasOne
     {
-        return $this->hasOne(Course::class, "id");
+        return $this->hasOne(Course::class, "id", "course_id");
     }
 }
