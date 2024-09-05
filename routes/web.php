@@ -71,6 +71,8 @@ Route::get("courses", [CourseController::class, "getAllCourse"]);
 
 Route::get("souravData", [StudentController::class, "getStudentDataWithCourse"]);
 
+Route::get("many-to-one", [StudentController::class, "manyToOneRelation"]);
+
 // Route::middleware("check1")->group(function () { // to apply middleware group to all routes
 //     Route::view("/home", "home")->middleware("check1");
 

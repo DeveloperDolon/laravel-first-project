@@ -3,8 +3,8 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Student extends Model
 {
@@ -16,8 +16,13 @@ class Student extends Model
         return "Hello Melo";
     }
 
-    public function courseData(): HasOne
+    public function courseData(): HasMany
     {
-        return $this->hasOne(Course::class, "id", "course_id");
+        return $this->hasMany(Course::class, "id", "course_id");
+    }
+
+    public function course() 
+    {
+        return $this->belongsTo(Course::class, "course_id");
     }
 }
