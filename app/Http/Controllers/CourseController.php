@@ -12,4 +12,8 @@ class CourseController extends Controller
         return Course::find(1);
     }
 
+    public function index(Course $key) {
+        return $key;
+    }
+
 }
